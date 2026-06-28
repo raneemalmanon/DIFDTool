@@ -1,4 +1,4 @@
-# DIFD — Digital Image Forgery Detector
+# DIFD Tool — Digital Image Forgery Detection Tool
 
 DIFD is a Streamlit web application for copy-move forgery detection and pixel-level localization. It drives a self-hosted, fine-tuned BusterNet inference sidecar and wraps it with an authenticated multi-user frontend, local audit logging, and session management.
 
