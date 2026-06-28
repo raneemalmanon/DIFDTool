@@ -1,0 +1,20 @@
+# --- Authentication & Secrets ---
+security/*.db
+security/sidecar_token
+security/local_tls/
+
+# --- Logs & State ---
+security/backups/
+security/install_state.json
+security/security_events.jsonl
+
+# --- Environment & Build Artifacts ---
+.venv/
+busternet_sidecar/.venv36/
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.pyc
+
+# --- Audit Reports ---
+security_reports/

@@ -1,0 +1,91 @@
+{
+  "experiment_config": {
+    "stage": "finetuned",
+    "epochs_requested": 50,
+    "epochs_ran": 25,
+    "early_stopping_patience": 7,
+    "trainable_last_layers": 10,
+    "warmup_epochs": 5
+  },
+  "hyperparameters": {
+    "learning_rate": 0.0001,
+    "optimizer": "adamw",
+    "loss": "tversky",
+    "lr_schedule": "cosine",
+    "weight_decay": 0.0001,
+    "tversky_alpha": 0.3,
+    "tversky_beta": 0.7,
+    "focal_alpha": 0.75,
+    "focal_gamma": 2.0,
+    "cosine_t_max": null
+  },
+  "dataset_and_augmentation": {
+    "train_samples": 140,
+    "val_samples": 30,
+    "test_samples_total": 30,
+    "test_original_samples": 15,
+    "test_forged_samples": 15,
+    "negative_to_positive_ratio": 16.636913755387166,
+    "positive_pixel_ratio": 0.05669926234654018,
+    "positive_weight": 16.636913755387166,
+    "augment": true,
+    "hflip_prob": 0.5,
+    "brightness_contrast_prob": 0.2,
+    "gaussian_noise_prob": 0.3,
+    "jpeg_prob": 0.3
+  },
+  "validation_phase": {
+    "monitor_metric": "val_pixel_f1",
+    "selected_threshold": 0.7000000000000001,
+    "selected_pixel_f1": 0.42362481393014156,
+    "selected_pixel_iou": 0.2687334954734363
+  },
+  "test_results": {
+    "threshold_0_50": {
+      "image_level": {
+        "accuracy": 0.5,
+        "f1": 0.6666666666666666,
+        "precision": 0.5,
+        "recall": 1.0,
+        "tp": 15,
+        "fp": 15,
+        "tn": 0,
+        "fn": 0,
+        "area_threshold": 0.01,
+        "original_false_positive_rate": 1.0
+      },
+      "pixel_level": {
+        "auc": 0.845149771430999,
+        "f1": 0.48186564412245025,
+        "iou": 0.31740645500635567,
+        "precision": 0.3829360620122244,
+        "recall": 0.6497166270393133,
+        "dice": 0.4818656441224502,
+        "original_mean_false_positive_rate": 0.184234619140625
+      }
+    },
+    "threshold_0_70": {
+      "image_level": {
+        "accuracy": 0.5333333333333333,
+        "f1": 0.6818181818181819,
+        "precision": 0.5172413793103449,
+        "recall": 1.0,
+        "tp": 15,
+        "fp": 14,
+        "tn": 1,
+        "fn": 0,
+        "area_threshold": 0.01,
+        "original_false_positive_rate": 0.9333333333333333
+      },
+      "pixel_level": {
+        "auc": 0.845149771430999,
+        "f1": 0.4900102758296309,
+        "iou": 0.3245123248099297,
+        "precision": 0.40880892990147316,
+        "recall": 0.6114650157761727,
+        "dice": 0.4900102758296309,
+        "original_mean_false_positive_rate": 0.15983784993489583
+      }
+    }
+  }
+}

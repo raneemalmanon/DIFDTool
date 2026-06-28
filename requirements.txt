@@ -1,0 +1,6 @@
+argon2-cffi==25.1.0
+cryptography==46.0.7
+fpdf2==2.8.7
+numpy==2.4.4
+Pillow==12.2.0
+streamlit==1.56.0

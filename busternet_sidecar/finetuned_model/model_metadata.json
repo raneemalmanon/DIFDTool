@@ -1,0 +1,31 @@
+{
+  "model_identity": {
+    "model_name": "Production BusterNet Weights (COVERAGE)",
+    "model_stage": "release_candidate",
+    "run_name": "production_calibrated_seed42",
+    "dataset": "COVERAGE"
+  },
+  "linked_assets": {
+    "weights_file": "production_weights_best.hd5",
+    "metrics_file": "production_metrics.json",
+    "readme_file": "README.md"
+  },
+  "runtime_requirements": {
+    "validation_selected_threshold": 0.7000000000000001
+  },
+  "training_config": {
+    "seed": 42,
+    "trainable_last_layers": 10,
+    "learning_rate": 0.0001,
+    "loss": "tversky",
+    "lr_schedule": "cosine",
+    "augment": true
+  },
+  "evaluation_metrics": {
+    "image_level_f1": 0.6818181818181819,
+    "test_pixel_f1": 0.4900102758296309,
+    "test_pixel_iou": 0.3245123248099297,
+    "test_pixel_auc": 0.845149771430999,
+    "pristine_mean_false_positive_pixel_rate": 0.15983784993489583
+  }
+}
